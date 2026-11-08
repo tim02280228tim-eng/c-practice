@@ -1,0 +1,21 @@
+name: build
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 編譯（gcc -Wall -Wextra -Werror）
+        run: make
+      - name: 執行
+        run: |
+          echo 12345 | ./reverse_integer
+          echo -120 | ./reverse_integer
+          echo 1200 | ./reverse_digits_print
+          ./sizeof_types
+          ./number_bases
+          ./char_and_string

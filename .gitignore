@@ -1,0 +1,8 @@
+# 編譯產生的執行檔
+reverse_integer
+reverse_digits_print
+sizeof_types
+number_bases
+char_and_string
+*.o
+*.exe
